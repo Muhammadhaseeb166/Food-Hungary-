@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Foodie Hub</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#111;
+      color:white;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+      background:#000;
+      position:sticky;
+      top:0;
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:bold;
+      color:#ff9800;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:white;
+      margin:0 15px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#ff9800;
+    }
+
+    .hero{
+      height:90vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600&auto=format&fit=crop') center/cover;
+    }
+
+    .hero-content{
+      background:rgba(0,0,0,0.6);
+      padding:40px;
+      border-radius:15px;
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:20px;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      padding:12px 30px;
+      background:#ff9800;
+      border:none;
+      border-radius:30px;
+      color:white;
+      font-size:18px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#e68900;
+      transform:scale(1.05);
+    }
+
+    section{
+      padding:70px 8%;
+    }
+
+    .title{
+      text-align:center;
+      font-size:40px;
+      margin-bottom:40px;
+      color:#ff9800;
+    }
+
+    .menu-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#1c1c1c;
+      border-radius:15px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+      text-align:center;
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      color:#ff9800;
+    }
+
+    .price{
+      margin:10px 0;
+      font-size:20px;
+      font-weight:bold;
+    }
+
+    .about{
+      display:flex;
+      flex-wrap:wrap;
+      gap:40px;
+      align-items:center;
+    }
+
+    .about img{
+      width:500px;
+      max-width:100%;
+      border-radius:20px;
+    }
+
+    .about-text{
+      flex:1;
+    }
+
+    .about-text h2{
+      color:#ff9800;
+      margin-bottom:20px;
+      font-size:40px;
+    }
+
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .review-card{
+      background:#1c1c1c;
+      padding:25px;
+      border-radius:15px;
+    }
+
+    footer{
+      background:#000;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    @media(max-width:768px){
+      .hero h1{
+        font-size:40px;
+      }
+
+      nav{
+        display:none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Foodie Hub</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <a href="#">About</a>
+      <a href="#">Reviews</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hot & Tasty Fast Food</h1>
+      <p>Pizza, Burgers, Fries & More Delicious Food</p>
+      <button class="btn">Order Now</button>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">Popular Menu</h2>
+
+    <div class="menu-container">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop">
+        <div class="card-content">
+          <h3>Cheese Pizza</h3>
+          <p>Loaded with extra cheese and toppings.</p>
+          <div class="price">$12</div>
+          <button class="btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop">
+        <div class="card-content">
+          <h3>Zinger Burger</h3>
+          <p>Crispy chicken burger with spicy sauce.</p>
+          <div class="price">$9</div>
+          <button class="btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?q=80&w=1200&auto=format&fit=crop">
+        <div class="card-content">
+          <h3>French Fries</h3>
+          <p>Golden crispy fries with ketchup.</p>
+          <div class="price">$5</div>
+          <button class="btn">Buy Now</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about">
+
+    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop">
+
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        We serve the most delicious fast food with premium quality ingredients.
+        Our mission is to provide tasty food with the best customer experience.
+        Enjoy hot pizzas, juicy burgers, crispy fries, and refreshing drinks.
+      </p>
+      <br>
+      <button class="btn">Read More</button>
+    </div>
+
+  </section>
+
+  <section>
+    <h2 class="title">Customer Reviews</h2>
+
+    <div class="reviews">
+
+      <div class="review-card">
+        <h3>Ali Khan</h3>
+        <p>
+          Amazing taste and fast delivery. The pizza was super fresh and cheesy.
+        </p>
+      </div>
+
+      <div class="review-card">
+        <h3>Sara Ahmed</h3>
+        <p>
+          Best burgers in town. Highly recommended for fast food lovers.
+        </p>
+      </div>
+
+      <div class="review-card">
+        <h3>Haseeb</h3>
+        <p>
+          Modern website design and delicious food menu. Loved it!
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Foodie Hub | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll(".btn");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        alert("Thanks for your order 🍔");
+      });
+    });
+  </script>
+
+</body>
+</html>
